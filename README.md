@@ -180,3 +180,21 @@ LuaOOP
     -- B 实例
     local b = B()
     print(b) -- > Object.A.B.Instance
+
+ 3.4 类方法getName
+    
+    -- 返回A名
+    print(A:getName())
+    
+ 3.5 类方法printSubclasses
+  
+    -- 打印当前基类下的所有子类名称
+    Object.printSubclasses()
+    
+ 3.6 全局方法printBaseclasses
+ 
+    -- 打印所有基类名称
+    OO.printBaseclasses()
+    -- or
+    -- printBaseclasses()
+    
