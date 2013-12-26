@@ -18,7 +18,7 @@ LuaOOP
     -- 获得预设基类
     local Object = OO.getBaseclass("Object")
     -- 打印类名
-    print(Object);
+    print(Object)
 
   1.1.2 使用object.lua
     
@@ -27,7 +27,7 @@ LuaOOP
     -- or
     -- local Object= getBaseclass("Object")
     -- 打印类名
-    print(Object);
+    print(Object)
 
  1.2 声明新类
     
@@ -41,7 +41,7 @@ LuaOOP
     -- or
     -- local Counter = class("Counter", Object, {--附加新数据})
     -- 打印类名
-    print(Counter);
+    print(Counter)
 
  1.3 声明类方法
     
@@ -56,16 +56,16 @@ LuaOOP
     
     local counter = Counter()
     -- 实例名
-    print(counter);
+    print(counter)
     -- 调用和打印
-    counter:add();
+    counter:add()
     print(counter:get(), counter.count)
     
  1.5 自定义构造函数
     
     function Counter:initialize(n)
         if n~=nil then
-            self.count = n;
+            self.count = n
         end
     end
     
