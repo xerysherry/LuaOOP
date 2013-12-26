@@ -16,7 +16,7 @@ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
 PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
 HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
 ]]
 
 ----------------------------------------------------------------
@@ -25,7 +25,10 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 local setmetatable=setmetatable;
 local type=type
+local pairs=pairs
+local tostring=tostring
 local assert=assert
+
 module("OO")
 
 --基类
@@ -198,7 +201,8 @@ function baseclass(name, o)
             return _instance;
         end,
         -- 获得子类
-        getClass = function (name)
+        getClass = function (this, name)
+            local classname = this.__name.."."..name;
             return this.getClassFromFullName(classname);
         end,
         -- 获得子类通过全名
@@ -215,7 +219,7 @@ function baseclass(name, o)
             for i, v in pairs(_classes) do
                 print(i);
             end
-        end
+        end,
     };
 
     if type(o)=="table" then
