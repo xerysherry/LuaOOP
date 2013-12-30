@@ -23,11 +23,12 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -- data: 2013-12-26
 -- write by xerysherry
 
-local setmetatable=setmetatable;
+local setmetatable=setmetatable
 local type=type
 local pairs=pairs
 local tostring=tostring
 local assert=assert
+local print=print
 
 --基类
 
