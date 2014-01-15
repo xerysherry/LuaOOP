@@ -28,6 +28,7 @@ local type=type
 local pairs=pairs
 local tostring=tostring
 local assert=assert
+local error=error
 local print=print
 
 module("OO")
